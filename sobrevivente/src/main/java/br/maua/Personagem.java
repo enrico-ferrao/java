@@ -4,9 +4,15 @@ public class Personagem {
     int energia = 10;
     int fome = 0;
     int sono = 0;
+    int vida = 10;
     
     //método: tipo de retorno, nome, lista de parâmetros e corpo
+    
+   
     void cacar(){
+         if (energia < 1 || fome == 10){
+            vida--;
+        }
         if(energia >= 2){
             System.out.println(nome + " caçando...");
             energia = energia - 2;
@@ -20,6 +26,9 @@ public class Personagem {
     }
 
     void comer(){
+         if (energia < 1 || fome == 10){
+            vida--;
+        }
         if(fome >= 1){
             System.out.printf("%s comendo...\n", nome);
             // fome = fome - 1;
@@ -34,6 +43,9 @@ public class Personagem {
     }
 
     void dormir(){
+         if (energia < 1 || fome == 10){
+            vida--;
+        }
         if(sono >= 1){
             System.out.printf("%s dormindo...\n", nome);
             --sono;
@@ -46,6 +58,9 @@ public class Personagem {
     
 
     int somar(int a, int b){
+         if (energia < 1 || fome == 10){
+            vida--;
+        }
         return a + b;
     }
     
