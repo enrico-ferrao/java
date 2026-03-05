@@ -56,12 +56,5 @@ public class Personagem {
         }
     }
     
-
-    int somar(int a, int b){
-         if (energia < 1 || fome == 10){
-            vida--;
-        }
-        return a + b;
-    }
     
 }
