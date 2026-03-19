@@ -6,7 +6,7 @@ public class ContaBancaria {
     private double saldo= 0;
 
 
-    public ContaBancaria (String titular, String numero, double saldo){
+    ContaBancaria (String titular, String numero, double saldo){
         this.titular = titular;
         this.numero = numero;
         if (saldo >= 0){
