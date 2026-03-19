@@ -9,7 +9,7 @@ public class ContaBancaria {
     ContaBancaria (String titular, String numero, double saldo){
         this.titular = titular;
         this.numero = numero;
-        if (saldo >= 0){
+        if (saldo > 0){
             this.saldo = saldo;
         }
     }
