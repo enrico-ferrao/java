@@ -16,14 +16,14 @@ public class ContaBancaria {
 
     public void depositar(double valor){
         if (valor > 0){
-        System.out.printf("%s esta depositando R$ %f \n", titular, valor);
+        System.out.printf("Operação: Depositar \n%s esta depositando R$ %f \n ------------ \n", titular, valor);
         this.saldo = saldo + valor;
         }
     }
 
     public void sacar(double valor){
             if (valor <= saldo){
-        System.out.printf("%s esta sacando R$ %f \n", titular, valor);
+        System.out.printf("Operação: Sacar \n %s esta sacando R$ %f \n ------------ \n", titular, valor);
         this.saldo = saldo - valor;
         }
         else {
@@ -34,7 +34,7 @@ public class ContaBancaria {
     public void transferir(ContaBancaria destino, double valor){
         if (valor <= saldo){
             this.saldo = saldo - valor;
-            System.out.printf("%s esta transferindo para %s, o valor de: R$ %f \n", titular,destino,valor);
+            System.out.printf("Operação: Transferencia \n%s esta transferindo para %s, o valor de: R$ %f \n ------------ \n", titular,destino,valor);
             destino.saldo += valor;
         }
         else {
@@ -43,10 +43,10 @@ public class ContaBancaria {
     }
 
     public void consultarSaldo(){
-        System.out.printf("O %s, possui em sua conta R$ %f \n", titular, saldo);
+        System.out.printf("Operação: Saldo \nA conta %s, titular: %s possui em sua conta R$ %f \n ------------ \n", numero, titular, saldo);
     }
 
     public void exibirExtrato(){
-        System.out.printf("----Extrato---- \n Titular: %s \n Conta: %s \n Saldo: %f \n ------------ \n", titular, numero, saldo);
+        System.out.printf("----Extrato---- \nTitular: %s \nConta: %s \nSaldo: %f \n ------------ \n", titular, numero, saldo);
     }
 }
