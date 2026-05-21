@@ -1,0 +1,7 @@
+
+public class AlunoDePosGraduacao{
+    private string nome;
+    private int idade;
+    private char conceito;
+}
+
